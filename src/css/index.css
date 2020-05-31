@@ -1,3 +1,14 @@
 .app{
 	color: red;
+	opacity: 0.5;
+	filter: Alpha(opacity=50);
+	transform: translate(100px);
+	
+	
+	
+	
+	 display: flex;
+	  transition: all .5s;
+	  user-select: none;
+	  background: linear-gradient(to bottom, white, black);
 }

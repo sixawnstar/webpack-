@@ -28,7 +28,16 @@ webpack 打包
 			use: ['style-loader', 'css-loader']
 		}, ]
 	}
-5.安装自动打包，webpack服务   npm i webpack-dev-server -D
+5.安装css自动添加前缀插件   npm i postcss-loader autoprefixer -d
+	创建postcss.config.js
+		配置
+			const autoprefixer = require("autoprefixer")
+			module.exports={
+				plugins:[autoprefixer]   //挂在插件
+			}
+	配置package.json 文件：
+		use: ['style-loader', 'css-loader',"postcss-loader"] 
+6.安装自动打包，webpack服务   npm i webpack-dev-server -D
 	配置package.json 文件：
 	"scripts": {
 		"dev":"webpack-dev-server"
@@ -40,7 +49,7 @@ webpack 打包
 		hot: true,
 		port: 8080
 	},
-6.配置打包
+7.配置打包
 	配置package.json 文件：
 	"scripts": {
 		"build":"webpack"
